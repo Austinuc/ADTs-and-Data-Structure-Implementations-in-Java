@@ -43,7 +43,6 @@ public class LinkedDeque<T> {
 
         return val;
     }
-
     public void addFirst(T val) {
         ListNode<T> newNode = new ListNode<>(val);
         if (size == 0) {
