@@ -2,8 +2,7 @@
 
 This is a custom implementations of the following ADTs.
 - List 
-- Set 
-- Map 
+- Hashing
 - Stack 
 - Queue 
 - Priority Queue 
@@ -14,6 +13,34 @@ This is a custom implementations of the following ADTs.
     Language: Java
     Build system: Maven
     JDK version: 18
+
+## Implementations
+
+### 1. Hash Table implementation with custom ArrayMap Class.
+    Usage: Map<K, V> map = new ArrayMap<>();
+An implementation of the Map interface.
+It internally keeps track of its key-value pairs by using an array of <b>SimpleEntry<K, V> </b>objects.</p>
+
+It uses the SimpleEntry key to generate a hash code that maps to an index of the Hash Table (Array)</p>
+<h3>Collisions handling strategy</h3>
+---
+ 
+ *     Uses separate chaining method with a doubly-linked list to handle collisions
+ *     Doubles the size of the table to the nearest prime number once the table is filled to 75%, and the existing entries are re-hashed
+
+| Signatures                       | Description                                                                                                  | O(n)                                                       |
+|----------------------------------|--------------------------------------------------------------------------------------------------------------|------------------------------------------------------------|
+| V get(Object key)                | Returns the value to which the specified key is mapped, or null if this map contains no mapping for the key. | O(1)                                                       |
+| V put(K key, V value)            | Associates the specified value with the specified key in this map.                                           | O(1) except during resizing of the buckets that takes O(n) |
+| V remove(Object key)             | Removes the mapping for a key from this map if it is present.                                                | O(1)                                                       |
+| void clear()                     | Removes all of the mappings from this map.                                                                   | O(n)                                                       |
+| boolean containsKey(Object key)  | Returns true if this map contains a mapping for the specified key.                                           | O(1)                                                       |
+| int size()                       | Returns the number of key-value mappings in this map.                                                        | O(1)                                                       |
+| Iterator<Entry<K, V>> iterator() | Returns an iterator that, when used, will yield all key-value mappings contained within this map.            | O(n)                                                       |
+
+
+
+### 2. Priority Queue implementation with AVL and Heap.
 
 ## Basic Definitions
 ***

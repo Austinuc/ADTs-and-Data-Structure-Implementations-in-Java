@@ -1,6 +1,6 @@
 package org.example;
 
-import Hashing_with_Map_Implementation.ArrayMap;
+import HashTable.ArrayMap;
 
 
 import java.util.Map;

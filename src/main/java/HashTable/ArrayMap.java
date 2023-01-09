@@ -1,4 +1,4 @@
-package Hashing_with_Map_Implementation;
+package HashTable;
 
 import java.util.*;
 import java.util.function.Consumer;
@@ -55,7 +55,6 @@ public class ArrayMap<K, V> implements Map<K, V> {
 //        table = new SimpleEntry[capacity];
 //        size = 0;
 //    }
-
 
 
     /**

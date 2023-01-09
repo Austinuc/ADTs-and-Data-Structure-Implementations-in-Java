@@ -1,4 +1,4 @@
-package Hashing_with_Map_Implementation;
+package HashTable;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;

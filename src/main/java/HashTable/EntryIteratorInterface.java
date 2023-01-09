@@ -1,4 +1,4 @@
-package Hashing_with_Map_Implementation;
+package HashTable;
 
 import java.util.Iterator;
 import java.util.Map;
