@@ -16,7 +16,20 @@ This is a custom implementations of the following ADTs.
 
 ## Implementations
 
-### 1. Hash Table implementation with custom ArrayMap Class.
+### 1. The Linked List ADT.
+The following operations make linked lists an ADT:
+
+| Operations   | Description                                                       | Big-O |
+|--------------|-------------------------------------------------------------------|-------|
+| Insert:      | inserts an element into the list.                                 | O(n)  |
+| Delete:      | removes and returns the specified position element from the list. | O(n)  |
+| Delete List: | removes all elements of the list (disposes the list).             | O(1)  |
+| Count:       | returns the number of elements in the list.                       | O(n)  |
+| Find nth:    | Find nth node from the end of the list.                           | O(n)  |
+
+
+
+### 2. Hash Table implementation with custom ArrayMap Class.
     Usage: Map<K, V> map = new ArrayMap<>();
 An implementation of the Map interface.
 It internally keeps track of its key-value pairs by using an array of <b>SimpleEntry<K, V> </b>objects.</p>
@@ -28,7 +41,7 @@ It uses the SimpleEntry key to generate a hash code that maps to an index of the
  *     Uses separate chaining method with a doubly-linked list to handle collisions
  *     Doubles the size of the table to the nearest prime number once the table is filled to 75%, and the existing entries are re-hashed
 
-| Signatures                       | Description                                                                                                  | O(n)                                                       |
+| Signatures                       | Description                                                                                                  | Big-O                                                      |
 |----------------------------------|--------------------------------------------------------------------------------------------------------------|------------------------------------------------------------|
 | V get(Object key)                | Returns the value to which the specified key is mapped, or null if this map contains no mapping for the key. | O(1)                                                       |
 | V put(K key, V value)            | Associates the specified value with the specified key in this map.                                           | O(1) except during resizing of the buckets that takes O(n) |
