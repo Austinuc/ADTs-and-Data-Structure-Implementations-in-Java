@@ -13,11 +13,12 @@ This is a custom implementations of the following ADTs.
     Language: Java
     Build system: Maven
     JDK version: 18
+    IDE: IntelliJ
 
 ## Implementations
 
 ### 1. The Linked List ADT.
-The following operations make linked lists an ADT:
+The following operations are the linked lists' implementation:
 
 | Operations   | Description                                                       | Big-O |
 |--------------|-------------------------------------------------------------------|-------|
@@ -52,8 +53,27 @@ It uses the SimpleEntry key to generate a hash code that maps to an index of the
 | Iterator<Entry<K, V>> iterator() | Returns an iterator that, when used, will yield all key-value mappings contained within this map.            | O(n)                                                       |
 
 
+### 2. Priority Queue
 
-### 2. Priority Queue implementation with AVL and Heap.
+#### AVL implementation.
+    Usage: _AVL<T> map = new _AVL<>();
+
+This AVL implementation prioritizes the nodes of the ALV tree by its value. It is a Double Priority Queue implementation.
+So, it can serve as a Min PQ as well as a Max PQ.
+
+| Signatures               | Description                                                                      | Big-O   |
+|--------------------------|----------------------------------------------------------------------------------|---------|
+| void add(T item)         | Adds an item to the PQ.                                                          | O(logn) |
+| boolean contains(T item) | Returns true if the PQ contains the given item; false otherwise.                 | O(logn) |
+| T peekMin()              | Returns the item with the lowest value or null if PQ is empty                    | O(logn) |
+| T peekMax()              | Returns the item with the highest value or null if PQ is empty                   | O(logn) |
+| T removeMin()            | Removes and returns the item with least-valued priority or null if PQ is empty   | O(logn) |
+| T removeMax()            | Removes and returns the item with highest-valued priority or null if PQ is empty | O(logn) |
+| int size()               | Returns the number of items in the PQ.                                           | O(1)    |
+| boolean isEmpty()        | Returns true if the PQ is empty, false otherwise.                                | O(1)    |
+
+#### Heap implementation.
+    Usage: ArrayHeapMinPQ<T> map = new ArrayHeapMinPQ<>();
 
 ## Basic Definitions
 ***
