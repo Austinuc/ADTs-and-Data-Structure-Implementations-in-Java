@@ -36,8 +36,8 @@ An implementation of the Map interface.
 It internally keeps track of its key-value pairs by using an array of <b>SimpleEntry<K, V> </b>objects.</p>
 
 It uses the SimpleEntry key to generate a hash code that maps to an index of the Hash Table (Array)</p>
-<h3>Collisions handling strategy</h3>
----
+
+<h3>Collisions Resolution Strategy</h3>
  
  *     Uses separate chaining method with a doubly-linked list to handle collisions
  *     Doubles the size of the table to the nearest prime number once the table is filled to 75%, and the existing entries are re-hashed
@@ -56,7 +56,7 @@ It uses the SimpleEntry key to generate a hash code that maps to an index of the
 ### 2. Priority Queue
 
 #### AVL implementation.
-    Usage: _AVL<T> map = new _AVL<>();
+    Usage: _AVL<T> avl = new _AVL<>();
 
 This AVL implementation prioritizes the nodes of the ALV tree by its value. It is a Double Priority Queue implementation.
 So, it can serve as a Min PQ as well as a Max PQ.
